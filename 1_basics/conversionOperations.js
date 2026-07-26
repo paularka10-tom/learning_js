@@ -38,6 +38,12 @@ let str2 = "NIGGA"
 let str3 =str1+ str2
 console.log(str3)
 
-console.log("1"+2)
-console.log(1 +"2")
-console.log(1+2+"2")
+// console.log("1"+2)
+// console.log(1 +"2")
+// console.log(1+2+"2")
+console.log(true)
+console.log(+true)
+
+let gg = 10
+console.log(gg++)
+console.log(++gg)
