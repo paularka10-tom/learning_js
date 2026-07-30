@@ -35,3 +35,29 @@ function loginMessage(username="NO ONE"){
 }
 // console.log(loginMessage("Arka"))
 console.log(loginMessage())
+
+function calculateNumPrice(val1, val2, ...num1){        // ... => rest/spread operator
+    return num1
+}
+
+console.log(calculateNumPrice(100,50,600))
+
+const thing = {
+    stuff: "pen",
+    price: 1023,
+}
+function handleObject(anyObject){
+    console.log(`Name: ${anyObject.stuff}, price: ${anyObject.price}`);
+}
+// handleObject(thing)
+handleObject({
+    thing: "pencil",
+    price: 511
+})
+
+const newArray = [200, 900, 800, 792]
+function returnValue(getArray){
+    return getArray[2]
+}
+console.log(returnValue(newArray));
+console.log(returnValue([100, 200,1000,304]));
