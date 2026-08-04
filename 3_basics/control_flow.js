@@ -34,6 +34,9 @@ let debitCard = true
 let loggedINfromAPP = false
 let loggedINfromWEB =true
 
-if (userLoggedin && debitCard && 2==2){
+if (userLoggedin && debitCard && 1==2){
     console.log("ALLOWED IN")
+}
+if (loggedINfromAPP || loggedINfromWEB){
+    console.log("ALLOWED IlN")
 }
