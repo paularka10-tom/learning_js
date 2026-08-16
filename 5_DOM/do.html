@@ -2,21 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>learnin DOM</title>
+    <title>DOM | Chai aur code</title>
 </head>
-<body style="background-color:black; color:rgb(105, 236, 102);">
+<body style="background-color: #212121; color: #fff;">
     <div class="parent">
-        <div class="month">JANUARY</div>
-        <div class="month">FEBRUARY</div>
-        <div class="month">MARCH</div>
-        <div class="month">APRIL</div>
-        <div class="month">JUNE</div>
+        <!-- this is a comment -->
+        <div class="day children">Monday</div>
+        <div class="day children">Tuesday</div>
+        <div class="day children">Wednesday</div>
+        <div class="day children">Thursday</div>
     </div>
 </body>
 <script>
-    const parents= document.querySelectorAll('.parent')
-    console.log(parents)
-    console.log(parents.children)
+    const parent = document.querySelector('.parent')
+     console.log(parent);
+     console.log(parent.children);
+     console.log(parent.children[1].innerHTML);
+
+    // for (let i = 0; i < parent.children.length; i++) {
+    //     console.log(parent.children[i].innerHTML);}
+    parent.children[2].style.color='pink'
+    //console.log(parent.firstElementChild);
+    //console.log(parent.lastElementChild);
+    const day1 = document.querySelector('.day')
+    console.log(day1)
+    console.log(day1.parentElement)
+    console.log(day1.nextElementSibling)
+    console.log("NODES: ",parent.childNodes)
+
 </script>
-</html>
+</html>         
