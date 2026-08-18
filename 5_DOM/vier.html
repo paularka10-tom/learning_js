@@ -5,9 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>javascript</title>
 </head>
-<body style="background-color: rgb(158, 217, 219); color: rgb(251, 133, 86);">
+<body style="background-color: rgb(197, 219, 158); color: rgb(251, 133, 86);">
     <ul class="lang">
         <li>Javascript</li>
     </ul>
 </body>
+<script>
+    function addLanguage(langName){
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`
+        document.querySelector('.lang')
+        document.querySelector('.lang').appendChild(li);
+    }
+    addLanguage("python")
+    addLanguage("java")
+
+    function addOpti(langName){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector.('lang').appendChild('li')
+    }
+    addOpti('kotlin')
+</script>
 </html>
