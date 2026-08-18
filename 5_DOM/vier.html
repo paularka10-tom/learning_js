@@ -23,8 +23,21 @@
     function addOpti(langName){
         const li = document.createElement('li')
         li.appendChild(document.createTextNode(langName))
-        document.querySelector.('lang').appendChild('li')
+        document.querySelector('.lang').appendChild(li)
     }
     addOpti('kotlin')
+
+    //edit
+    const seclang = document.querySelector("li:nth-child(2)")
+    seclang.innerHTML = "LOLO"
+
+    // optimisation
+    const newli = document.createElement('li')
+    newli.textContent = "LOLO"
+    seclang.replaceWith(newli)
+
+    //remove
+    const lastlang = document.querySelector('li:last-child')
+    lastlang.remove()
 </script>
 </html>
