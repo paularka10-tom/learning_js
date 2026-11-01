@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background: #0d1117;
+    font-family: system-ui, sans-serif;
+  }
+  .card {
+    width: 300px;
+    padding: 24px;
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 16px;
+    color: #e6edf3;
+    text-align: center;
+  }
+  .card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #30363d;
+  }
+
+</style>
+<body>
+    <div class="card">
+    <img id="avatar" alt="Avatar">
+    <h2>Hitesh Choudhary</h2>
+    <div><strong>61.4k</strong><span>Followers</span></div>
+    
+    <a href="https://github.com/hiteshchoudhary" target="_blank">View Profile</a>
+    </div>
+
+</body>
+
+<script>
+    const reqURL ='https://api.github.com/users/hiteshchoudhary'
+    let xhr = new XMLHttpRequest();
+    console.log("here")
+    xhr.open('GET', reqURL)
+    xhr.onreadystatechange = function(){console.log(xhr.readyState);
+        if(xhr.readyState === 4){
+            const data = JSON.parse(this.responseText)
+            console.log(typeof data)
+            console.log(data.avatar_url)
+            console.log(data.followers);
+            document.getElementById("avatar").src=data.avatar_url
+            document.getElementById("followers").textContent=data.followers.toLocaleString();
+        }
+    }
+    
+    xhr.send();
+</script>
+</html>
